@@ -1,27 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jobs Secure Gov</title>
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="css/jobs.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore open positions at SecureGov — join the national agency protecting government networks, IT infrastructure, and digital services.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <title>Careers | SecureGov</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/jobs.css">
 </head>
 <body>
 
-  <header>
-    <h1>Secure Gov</h1>
+  <div class="top-bar">
+    <div class="container">
+      <span>All systems operational</span>
+      <span>14 departments protected</span>
+      <span>24/7 monitoring</span>
+      <span>Avg. incident response: 11 min</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <input type="checkbox" id="navigation-toggle-checkbox">
+    <div class="nav-row">
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="SecureGov logo" width="30" height="30">
+        <span>SecureGov<span class="org-type">IT &amp; Cybersecurity Agency</span></span>
+      </a>
+      <label for="navigation-toggle-checkbox" class="navigation-toggle-label" aria-label="Toggle navigation menu">&#9776;</label>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="jobs.html" aria-current="page">Careers</a>
+        <a href="about.html">About</a>
+        <a href="apply.html" class="nav-cta">Apply Now</a>
+      </nav>
+    </div>
   </header>
 
   <div class="page-layout">
 
     <aside aria-label="Application information">
       <h2>How to Apply</h2>
-      <p>Submit applications through apply before the closing time. Include a current CV and a 500-word pitch addressing the essential requirements.</p>
-      <a href="apply.html">Apply via apply &rarr;</a>
+      <p>Submit applications through the portal before the closing time. Include a current CV and a 500-word pitch addressing the essential requirements.</p>
+      <a href="apply.html">Apply via portal &rarr;</a>
 
       <h2>Security Clearances</h2>
-      <p>background check required</p>
+      <p>All roles require a background check. Clearance applications begin after a conditional offer is made.</p>
 
       <h2>Working with Us</h2>
       <ul>
@@ -34,10 +59,21 @@
 
     <main>
 
-      <article class="jobcard"> <div class="cardbadges"> <span class="badge badgeref">Ref: SGSC-321</span> <span class="badge badgeopen">&#10003; Accepting Applications</span> <span class="badge badgecl">National Security Clearance Required</span> <span class="badge badgetype">Full-Time · Permanent</span> </div>
+      <!-- POSITION 1 -->
+      <article class="jobcard">
+        <div class="cardbadges">
+          <span class="badge badgeref">Ref: SGSC-321</span>
+          <span class="badge badgeopen">&#10003; Accepting Applications</span>
+          <span class="badge badgecl">National Security Clearance Required</span>
+          <span class="badge badgetype">Full-Time · Permanent</span>
+        </div>
 
         <h2>Cyber Threat Intelligence Analyst</h2>
-        <p class="shortdesc">Monitor, detect, and analyze actionable cyber threat intelligence targeting Qatar's critical national infrastructure, government networks, and key economic sectors.</p> <dl class="jobinfostrip"> <div class="infocell"><dt>Reference</dt><dd>SGSC-321</dd></div> <div class="infocell"><dt>Salary Range</dt><dd>QAR 22,000 – QAR 32,000 pm</dd></div>
+        <p class="shortdesc">Monitor, detect, and analyze actionable cyber threat intelligence targeting Qatar's critical national infrastructure, government networks, and key economic sectors.</p>
+
+        <dl class="jobinfostrip">
+          <div class="infocell"><dt>Reference</dt><dd>SGSC-321</dd></div>
+          <div class="infocell"><dt>Salary Range</dt><dd>QAR 22,000 – QAR 32,000 pm</dd></div>
           <div class="infocell"><dt>Classification</dt><dd>Grade 6 (Technical)</dd></div>
           <div class="infocell"><dt>Reporting To</dt><dd>Head of National Threat Analysis Center</dd></div>
           <div class="infocell"><dt>Closes</dt><dd>25 July 2026</dd></div>
@@ -62,10 +98,11 @@
 
         <section>
           <h3>Requirements</h3>
-          <div class="reqcolumns"> <div class="reqcol essential">
+          <div class="reqcolumns">
+            <div class="reqcol essential">
               <h4>Essential</h4>
               <ul>
-                <li>Bachelor’s degree in Computer Science, Cybersecurity, or Software Engineering</li>
+                <li>Bachelor's degree in Computer Science, Cybersecurity, or Software Engineering</li>
                 <li>3+ years of direct experience in a dedicated SOC or Threat Intelligence unit</li>
                 <li>Strong grasp of network protocols, traffic analysis, and structural log analysis</li>
                 <li>Fluency in professional English (written and spoken)</li>
@@ -84,13 +121,24 @@
           </div>
         </section>
 
-        <a class="btnapply" href="apply.html">Apply Now</a> </article>
+        <a class="btnapply" href="apply.html">Apply Now</a>
+      </article>
 
-
-      <article class="jobcard"> <div class="cardbadges"> <span class="badge badgeref">Ref: SGCS-123</span> <span class="badge badgeopen">&#10003; Accepting Applications</span> <span class="badge badgecl">Special Vetting Clearance Required</span> <span class="badge badgetype">Full-Time · Contract</span> </div>
+      <!-- POSITION 2 -->
+      <article class="jobcard">
+        <div class="cardbadges">
+          <span class="badge badgeref">Ref: SGCS-123</span>
+          <span class="badge badgeopen">&#10003; Accepting Applications</span>
+          <span class="badge badgecl">Special Vetting Clearance Required</span>
+          <span class="badge badgetype">Full-Time · Contract</span>
+        </div>
 
         <h2>Senior Cloud Security Architect</h2>
-        <p class="shortdesc">Lead the secure structural design, implementation, and assessment of government cloud infrastructure to ensure full compliance with the Qatar National Information Assurance (NIA) Policy.</p> <dl class="jobinfostrip"> <div class="infocell"><dt>Reference</dt><dd>SGCS-123</dd></div> <div class="infocell"><dt>Salary Range</dt><dd>QAR 38,000 – QAR 52,000 pm</dd></div>
+        <p class="shortdesc">Lead the secure structural design, implementation, and assessment of government cloud infrastructure to ensure full compliance with the Qatar National Information Assurance (NIA) Policy.</p>
+
+        <dl class="jobinfostrip">
+          <div class="infocell"><dt>Reference</dt><dd>SGCS-123</dd></div>
+          <div class="infocell"><dt>Salary Range</dt><dd>QAR 38,000 – QAR 52,000 pm</dd></div>
           <div class="infocell"><dt>Classification</dt><dd>Grade 3 (Senior Expert)</dd></div>
           <div class="infocell"><dt>Reporting To</dt><dd>Director of Cloud Security Compliance</dd></div>
           <div class="infocell"><dt>Closes</dt><dd>1 August 2026</dd></div>
@@ -106,7 +154,7 @@
           <h3>Key Responsibilities</h3>
           <ol>
             <li><strong>Architect secure landing zones</strong> and blueprints across hybrid environments keeping data sovereignty policies at the center.</li>
-            <li><strong>Perform deep structural audits</strong> on cloud architectures to enforce the State’s cloud security compliance baselines.</li>
+            <li><strong>Perform deep structural audits</strong> on cloud architectures to enforce the State's cloud security compliance baselines.</li>
             <li><strong>Embed DevSecOps practices</strong> by configuring automated guardrails via Infrastructure as Code (IaC) pipelines.</li>
             <li><strong>Deliver technical consultancy</strong> to institutional IT leaders regarding data isolation, identity management, and threat modeling.</li>
             <li><strong>Direct and upskill</strong> a small engineering cohort in advanced cloud validation and logging practices.</li>
@@ -115,7 +163,8 @@
 
         <section>
           <h3>Requirements</h3>
-          <div class="reqcolumns"> <div class="reqcol essential">
+          <div class="reqcolumns">
+            <div class="reqcol essential">
               <h4>Essential</h4>
               <ul>
                 <li>7+ years in Information Security, with at least 3 years explicitly modeling or securing public cloud instances</li>
@@ -127,7 +176,7 @@
             <div class="reqcol preferable">
               <h4>Preferable</h4>
               <ul>
-                <li>Master’s Degree in Cybersecurity, Computer Networks, or an engineering equivalent</li>
+                <li>Master's Degree in Cybersecurity, Computer Networks, or an engineering equivalent</li>
                 <li>Industry standard certifications: CCSP, AWS Certified Security Specialty, or AZ-500</li>
                 <li>Familiarity with modern deployment security checks (Terraform, Checkov, or Snyk)</li>
                 <li>Bilingual proficiency (Arabic and English) is highly preferred</li>
@@ -136,14 +185,53 @@
           </div>
         </section>
 
-        <a class="btnapply" href="apply.html">Apply Now</a> </article>
+        <a class="btnapply" href="apply.html">Apply Now</a>
+      </article>
 
     </main>
 
   </div>
 
-  <footer>
-    <p>&copy; 2026 Secure Gov</p>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand" style="margin-bottom:14px;">
+            <img src="images/shield-logo-footer.png" alt="" width="26">
+            <span>SecureGov</span>
+          </a>
+          <p>The national agency for government network security, IT infrastructure, and digital support services.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Site</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobs.html">Careers</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="apply.html">Apply now</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Project Links</h4>
+          <ul>
+            <li><a href="#">Jira Board</a></li>
+            <li><a href="#">Github repository</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:info@securegov.gov">info@securegov.gov</a></li>
+            <li><a href="tel:+974400000000">+974 4000 0000</a></li>
+            <li>Doha, Qatar</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 SecureGov. All rights reserved.</span>
+        <span>BUILD: GROUP 3 &middot; COS10026</span>
+      </div>
+    </div>
   </footer>
 
 </body>
