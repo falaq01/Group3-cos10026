@@ -1,3 +1,8 @@
+* {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
 aside {
   float: right;
   width: 25%;
@@ -238,11 +243,12 @@ main {
   .page-layout {
     padding: 1rem;
     margin: 1rem;
+    width: auto;
   }
 
   aside {
-    float: none;
-    width: 100%;
+    float: none !important;
+    width: 100% !important;
     margin: 0 0 1.5rem 0;
   }
 
@@ -257,6 +263,8 @@ main {
   .infocell {
     border-right: none;
     border-bottom: 1px solid #C7DCEF;
+    flex: none;
+    width: 100%;
   }
 
   .infocell:last-child {
@@ -275,5 +283,9 @@ main {
   .page-title {
     padding: 0 1rem;
     font-size: 1.5rem;
+  }
+
+  article.jobcard {
+    padding: 1rem;
   }
 }
