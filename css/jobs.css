@@ -14,8 +14,13 @@ aside h2 {
   text-transform: uppercase;
   color: #0C447C;
   margin-bottom: .6rem;
+  margin-top: 1rem;
   padding-bottom: .4rem;
   border-bottom: 2px solid #C7DCEF;
+}
+
+aside h2:first-child {
+  margin-top: 0;
 }
 
 aside p {
@@ -140,7 +145,7 @@ article.jobcard h4 {
 }
 
 article.jobcard section {
-  margin-bottom: 2.5rem;
+  margin-bottom: 0.6rem;
   padding: 0;
 }
 
@@ -207,4 +212,68 @@ article.jobcard ul li {
 
 main {
   overflow: hidden;
+}
+
+.page-title {
+  max-width: 1100px;
+  margin: 2rem auto 0;
+  padding: 0 2rem;
+  color: #0C447C;
+}
+
+.cta-band iframe {
+  border: none;
+}
+
+.footer-col h3 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #6FA9D6;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 768px) {
+  .page-layout {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  aside {
+    float: none;
+    width: 100%;
+    margin: 0 0 1.5rem 0;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  .jobinfostrip {
+    flex-direction: column;
+  }
+
+  .infocell {
+    border-right: none;
+    border-bottom: 1px solid #C7DCEF;
+  }
+
+  .infocell:last-child {
+    border-bottom: none;
+  }
+
+  .reqcolumns {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-band iframe {
+    width: 100%;
+    height: 200px;
+  }
+
+  .page-title {
+    padding: 0 1rem;
+    font-size: 1.5rem;
+  }
 }
