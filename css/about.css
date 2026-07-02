@@ -47,15 +47,3 @@ tr:hover {
     max-width: 100%;
   }
 }
-
-.footer-col a {
-  color: #B9D2E8;
-  text-decoration: none;
-  cursor: pointer;
-  pointer-events: auto;
-}
-
-.footer-col a:hover {
-  color: #ffffff;
-  text-decoration: underline;
-}
