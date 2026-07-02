@@ -177,7 +177,7 @@ nav.main-nav a.nav-cta:hover { background: var(--teal-bright); }
 .btn-outline-dark:hover { background: var(--blue-primary); color: var(--white); }
 
 .hero {
-  background: linear-gradient(180deg, var(--navy-deep) 0%, #0A3A69 100%);
+  background: linear-gradient(135deg, #071832 0%, #0C447C 55%, #185FA5 100%);
   color: var(--white);
 }
 .hero .container {
