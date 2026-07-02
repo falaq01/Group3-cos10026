@@ -1,183 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - SecureGov</title>
-
-    <link rel="stylesheet" href="styles.css">
-
-    <style>
-        .highlight {
-            background-color: #fff3cd;
-            padding: 4px 8px;
-            border-radius: 4px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | SecureGov</title>
+  <meta name="description" content="Learn about SecureGov's mandate, leadership, and approach to protecting government networks and digital infrastructure.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/about.css">
 </head>
-
 <body>
 
-<nav>
-    <a href="index.html">Home</a> |
-    <a href="jobs.html">Jobs</a> |
-    <a href="apply.html">Apply</a> |
-    <a href="about.html">About</a>
-</nav>
+  <div class="top-bar">
+    <div class="container">
+      <span>All systems operational</span>
+      <span>14 departments protected</span>
+      <span>24/7 monitoring</span>
+      <span>Avg. incident response: 11 min</span>
+    </div>
+  </div>
 
-<header>
-    <h1>SecureGov</h1>
-    <p>Team Profile Page</p>
-</header>
+  <header class="site-header">
+    <input type="checkbox" id="navigation-toggle-checkbox">
+    <div class="nav-row">
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="SecureGov logo" width="30" height="30">
+        <span>SecureGov<span class="org-type">IT &amp; Cybersecurity Agency</span></span>
+      </a>
+      <label for="navigation-toggle-checkbox" class="navigation-toggle-label">&#9776;</label>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="jobs.html">Careers</a>
+        <a href="about.html" aria-current="page">About</a>
+        <a href="apply.html" class="nav-cta">Apply Now</a>
+      </nav>
+    </div>
+  </header>
 
-<div id="student-ids">
-    <h2>Student IDs</h2>
-    <p>Falaq &mdash; 106194653</p>
-    <p>Mohamed &mdash; 106404909</p>
-    <p>Syed &mdash; 106195737</p>
-    <p>Hend &mdash; 106194174</p>
-</div>
+  <div class="page-header">
+    <div class="container">
+      <span class="eyebrow-label">About the agency</span>
+      <h1>A national mandate to keep government systems secure</h1>
+      <p>SecureGov was established to give government departments a single, accountable partner for cybersecurity, infrastructure, and digital support, so that public services stay protected and available.</p>
+    </div>
+  </div>
 
-<section>
-    <h2>Group Information</h2>
+  <section class="section-white">
+    <div class="container">
+      <div class="grid-2">
+        <div>
+          <span class="eyebrow-label">Our mandate</span>
+          <h2>Why SecureGov exists</h2>
+          <p>Government departments manage sensitive data and deliver services that the public depends on daily — from healthcare records to utility systems. As these systems have become more connected, they have also become more exposed.</p>
+          <p>SecureGov was formed to centralise that responsibility: one agency, accountable for the security and reliability of the technology behind public services, working in partnership with every department rather than in place of them.</p>
+        </div>
+        <div>
+          <span class="eyebrow-label">How we work</span>
+          <h2>Partnership, not just provision</h2>
+          <p>We embed with department IT teams, run a 24/7 Security Operations Centre, and maintain shared infrastructure standards across government. Every system we touch is logged, audited, and reviewed against national cybersecurity standards.</p>
+          <p>Departments retain ownership and visibility over their own systems at all times. SecureGov provides the expertise, monitoring, and rapid response capacity that few departments could build alone.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <ul>
-        <li><strong>Group Name:</strong> SecureGov</li>
+  <section class="section-light">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow-label">What guides us</span>
+        <h2>Our principles</h2>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Integrity</h3>
+          <p>We hold ourselves to the same standards we expect departments to meet — transparent processes, clear accountability, and no shortcuts on security.</p>
+        </div>
+        <div class="card">
+          <h3>Readiness</h3>
+          <p>Threats don't keep business hours, so neither do we. Our teams are structured for continuous monitoring and rapid response, every day of the year.</p>
+        </div>
+        <div class="card">
+          <h3>Capability building</h3>
+          <p>We aim to strengthen department teams, not replace them — sharing knowledge and tools so security expertise grows across government, not just within our walls.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <li><strong>Class Schedule</strong>
-            <ul>
-                <li>Sunday
-                    <ul>
-                        <li>11:00 AM - 12:00 PM</li>
-                        <li>1:00 PM - 3:00 PM</li>
-                    </ul>
-                </li>
-                <li>Monday
-                    <ul>
-                        <li>11:00 AM - 12:00 PM</li>
-                        <li>1:00 PM - 3:00 PM</li>
-                    </ul>
-                </li>
-            </ul>
+  <section class="section-white">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow-label">What we offer</span>
+        <h2>Our services at a glance</h2>
+      </div>
+      <div class="grid-2">
+        <div>
+          <h3>Service areas</h3>
+          <ul>
+            <li>Network Security
+              <ul>
+                <li>24/7 threat monitoring</li>
+                <li>Incident response</li>
+                <li>Penetration testing</li>
+              </ul>
+            </li>
+            <li>IT Infrastructure
+              <ul>
+                <li>Data centre management</li>
+                <li>Workstation deployment</li>
+                <li>System maintenance</li>
+              </ul>
+            </li>
+            <li>Digital Support
+              <ul>
+                <li>Help desk services</li>
+                <li>Staff technology training</li>
+                <li>Incident escalation</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3>Key terms</h3>
+          <dl>
+            <dt>SOC</dt>
+            <dd>Security Operations Centre — the team that monitors government networks around the clock.</dd>
+            <dt>Elevated Clearance</dt>
+            <dd>A higher level of government security clearance required for roles with access to sensitive systems.</dd>
+            <dt>Incident Response</dt>
+            <dd>The process of identifying, containing, and resolving a cybersecurity incident.</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-light">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow-label">Fast facts</span>
+        <h2>SecureGov by the numbers</h2>
+      </div>
+      <table>
+        <caption>Key statistics about SecureGov's operations</caption>
+        <thead>
+          <tr>
+            <th scope="col">Metric</th>
+            <th scope="col">Figure</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Departments protected</th>
+            <td>14</td>
+          </tr>
+          <tr>
+            <th scope="row">Threats neutralised (past year)</th>
+            <td>1,200+</td>
+          </tr>
+          <tr>
+            <th scope="row">Critical system uptime</th>
+            <td>99.97%</td>
+          </tr>
+          <tr>
+            <th scope="row">Average incident response time</th>
+            <td>11 minutes</td>
+          </tr>
+          <tr>
+            <th scope="row">Staff holding security clearance</th>
+            <td>100%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section-white">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow-label">Project team</span>
+        <h2>Group 3 — COS10026 Web Technology</h2>
+        <p>This website was designed and built as a group project for the Applied Web Project, Part 1.</p>
+      </div>
+
+      <ul class="group-info-list">
+        <li><strong>Group Name:</strong> SecureGov
+          <ul>
+            <li><strong>Class Schedule:</strong>
+              <ul>
+                <li>Sunday: 11:00 AM – 12:00 PM / 1:00 PM – 3:00 PM</li>
+                <li>Monday: 11:00 AM – 12:00 PM / 1:00 PM – 3:00 PM</li>
+              </ul>
+            </li>
+          </ul>
         </li>
+      </ul>
 
-        <li><strong>Number of Members:</strong> 4</li>
+      <figure class="group-figure">
+        <img src="images/Team image.jpeg" alt="AI-generated avatars of Group 3 team members: Falaq Nadeem, Hend Ali, Syed, and Muhammad Ali">
+        <figcaption>Group 3, COS10026 Web Technology. (AI-generated avatars)</figcaption>
+      </figure>
 
-        <li><strong>Team Members:</strong>
-            <ul>
-                <li>Falaq Nadeem Riaz Mohd Riaz</li>
-                <li>Mohamed Ali Gueydi</li>
-                <li>Syed Ahmed Yasir Quadri</li>
-                <li>Hend Ali I S Alali</li>
-            </ul>
-        </li>
-    </ul>
-</section>
-
-<section>
-    <h2>Meet Our Team</h2>
-
-    <figure>
-        <img src="group-photo.jpeg"
-             alt="SecureGov team members posing together">
-        <figcaption>The SecureGov Team Members</figcaption>
-    </figure>
-</section>
-
-<section>
-    <h2>Member Contributions and Personal Quotes</h2>
-
-    <dl>
-
-        <dt>Falaq Nadeem Riaz Mohd Riaz
-            <span style="font-size: 0.85em; color: #666;">(Student ID: 106194653)</span>
-        </dt>
-        <dd><strong>Contribution:</strong> Home page, application form layout, GitHub deployment</dd>
-        <dd><strong>Quote:</strong> <span class="highlight">"Work hard. Stay humble. Keep growing."</span></dd>
-        <dd>
-            <strong>Favourite Language:</strong> English &ndash;
-            Translation: <em>Hello! Welcome to our website.</em>
-        </dd>
-
-        <dt>Mohamed Ali Gueydi
-            <span style="font-size: 0.85em; color: #666;">(Student ID: 106404909)</span>
-        </dt>
-        <dd><strong>Contribution:</strong> Jobs page, application form submission, Jira board</dd>
-        <dd><strong>Quote:</strong> <span class="highlight">"He who does not like to scale mountains will live forever among the potholes."</span></dd>
-        <dd>
-            <strong>Favourite Language:</strong> Arabic &ndash;
-            Translation: <em>Marhaban bikum fi mawqi'ina (Welcome to our website)</em>
-        </dd>
-
-        <dt>Syed Ahmed Yasir Quadri
-            <span style="font-size: 0.85em; color: #666;">(Student ID: 106195737)</span>
-        </dt>
-        <dd><strong>Contribution:</strong> Application form fields and validation</dd>
-        <dd><strong>Quote:</strong> <span class="highlight">"No one can make you feel inferior without your own consent."</span></dd>
-        <dd>
-            <strong>Favourite Language:</strong> Urdu &ndash;
-            Translation: <em>Hamari website mein khush amadeed (Welcome to our website)</em>
-        </dd>
-
-        <dt>Hend Ali I S Alali
-            <span style="font-size: 0.85em; color: #666;">(Student ID: 106194174)</span>
-        </dt>
-        <dd><strong>Contribution:</strong> About page</dd>
-        <dd><strong>Quote:</strong> <span class="highlight">"Success starts with showing up."</span></dd>
-        <dd>
-            <strong>Favourite Language:</strong> Qatari (Arabic Dialect) &ndash;
-            Translation: <em>Hala Wallah, nawwartoo mawqi'na (Welcome to our website)</em>
-        </dd>
-
-    </dl>
-</section>
-
-<section>
-    <h2>Fun Facts About Our Team</h2>
-
-    <table>
-        <caption>SecureGov Team Fun Facts</caption>
-        <tr>
-            <th>Member</th>
-            <th>Dream Job</th>
-            <th>Coding Snack</th>
-            <th>Hometown</th>
-            <th>Fun Fact</th>
-        </tr>
-        <tr>
-            <td>Falaq</td>
-            <td>AI Engineer</td>
-            <td>Hot Cheetos / Diet Coke</td>
-            <td>Karachi</td>
-            <td>Enjoys teamwork and can never say no to a good movie night.</td>
-        </tr>
-        <tr>
-            <td>Mohamed</td>
-            <td>Cybersecurity Specialist</td>
+      <table class="team-table">
+        <caption>Group 3 members, student IDs and contributions</caption>
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Student ID</th>
+            <th scope="col">Contribution</th>
+            <th scope="col">Hometown</th>
+            <th scope="col">Coding Snack</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Falaq Nadeem</th>
+            <td>106194653</td>
+            <td>Home page, application form layout, GitHub deployment</td>
+            <td>Pakistan</td>
+            <td>Hot Cheetos</td>
+          </tr>
+          <tr>
+            <th scope="row">Muhammad Ali</th>
+            <td>106404909</td>
+            <td>Jobs page, application form submission, Jira board</td>
+            <td>Tunisia</td>
             <td>Ice Cream</td>
-            <td>Tunis</td>
-            <td>Loves challenging board games and getting lost in a great book.</td>
-        </tr>
-        <tr>
-            <td>Syed</td>
-            <td>Programmer Simulator</td>
+          </tr>
+          <tr>
+            <th scope="row">Syed</th>
+            <td>106195737</td>
+            <td>Application form fields and validation</td>
+            <td>India</td>
             <td>Batatos</td>
-            <td>Hyderabad</td>
-            <td>Usually at the gym or cheering on his favourite sports.</td>
-        </tr>
-        <tr>
-            <td>Hend</td>
-            <td>Cybersecurity Engineer</td>
-            <td>Red Bull / Kinder</td>
+          </tr>
+          <tr>
+            <th scope="row">Hend</th>
+            <td>106194174</td>
+            <td>About page</td>
             <td>Qatar</td>
-            <td>Loves shopping and enjoys a good salon day.</td>
-        </tr>
-    </table>
-</section>
+            <td>Red Bull</td>
+          </tr>
+        </tbody>
+      </table>
 
-<footer>
-    <p>&copy; 2026 SecureGov Team | Web Development Project</p>
-</footer>
+      <p class="ai-credit"><em>Note: Team avatars were generated using AI image generation tools as a representation of group members.</em></p>
+
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container">
+      <h2>Interested in joining our mission?</h2>
+      <p>We're growing our cybersecurity, infrastructure, and support teams. See what's currently open.</p>
+      <a href="jobs.html" class="btn btn-primary">View open roles</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand footer-brand">
+            <img src="images/shield-logo-footer.png" alt="SecureGov logo" width="26">
+            <span>SecureGov</span>
+          </a>
+          <p>The national agency for government network security, IT infrastructure, and digital support services.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Site</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobs.html">Careers</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="apply.html">Apply now</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Project Links</h3>
+          <ul>
+            <li><a href="#">Jira Board</a></li>
+            <li><a href="#">GitHub repository</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="mailto:info@securegov.gov">info@securegov.gov</a></li>
+            <li><a href="tel:+974400000000">+974 4000 0000</a></li>
+            <li>Doha, Qatar</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 SecureGov. All rights reserved.</span>
+        <span>BUILD: GROUP 3 &middot; COS10026</span>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
