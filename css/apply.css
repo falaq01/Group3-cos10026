@@ -192,6 +192,12 @@ textarea {
     flex-direction: column-reverse;
   }
 
+  .form-section-title {
+  font-size: 1.5rem;
+  color: var(--navy-deeper);
+  margin-bottom: 24px;
+}
+  
   .form-actions .btn {
     width: 100%;
     text-align: center;
