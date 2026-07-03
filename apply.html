@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apply Now | SecureGov</title>
+<meta name="description" content="Submit your application for an open role at SecureGov, the national IT and cybersecurity services agency.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/application.css">
+</head>
+<body>
+
+<header class="site-header">
+  <input type="checkbox" id="nav-toggle-checkbox">
+  <div class="container nav-row">
+    <a href="index.html" class="brand">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M15 2L26 6.5V14C26 21.5 21 26.5 15 28C9 26.5 4 21.5 4 14V6.5L15 2Z" stroke="#FFFFFF" stroke-width="1.6" fill="rgba(255,255,255,0.06)"/>
+        <path d="M10.5 15L13.5 18L19.5 11.5" stroke="#1D9E75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>SecureGov<span class="org-type">IT &amp; Cybersecurity Agency</span></span>
+    </a>
+    <label for="nav-toggle-checkbox" class="nav-toggle-label" aria-label="Toggle navigation menu">&#9776;</label>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="jobs.html">Careers</a>
+      <a href="about.html">About</a>
+      <a href="apply.html" class="nav-cta" aria-current="page">Apply Now</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-header apply-page-header">
+  <div class="container">
+    <div class="page-header-inner">
+      <span class="eyebrow-label">Job application</span>
+      <h1>Apply for a role at SecureGov</h1>
+      <p>Fill in the form below. Fields marked with an asterisk (*) are required.</p>
+    </div>
+  </div>
+</div>
+
+<section class="section-light">
+  <div class="container">
+    <div class="form-card">
+
+      <form action="formtest.php" method="post">
+
+        <fieldset class="form-fieldset">
+          <legend>Role &amp; your details</legend>
+          <p class="fieldset-sub">Tell us which role you're applying for and how to reach you.</p>
+
+          <div class="field-group">
+            <label for="role">Role you're applying for<span class="req">*</span></label>
+            <select id="role" name="role" required>
+              <option value="">Select a role</option>
+              <option value="cybersecurity-analyst">Cybersecurity Analyst — REQ-2026-0114</option>
+              <option value="it-support-officer">IT Support Officer — REQ-2026-0119</option>
+              <option value="network-infrastructure-engineer">Network Infrastructure Engineer — REQ-2026-0122</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label for="jobRef">Job reference number<span class="req">*</span></label>
+            <input type="text" id="jobRef" name="jobRef" required
+                   pattern="[A-Za-z0-9]{5}"
+                   maxlength="5"
+                   placeholder=" ">
+            <p class="field-hint">Exactly 5 letters/numbers, e.g. R2026 (see the job posting).</p>
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="firstName">First name<span class="req">*</span></label>
+              <input type="text" id="firstName" name="firstName" required
+                     pattern="[A-Za-z\s\-']{2,40}"
+                     placeholder=" "
+                     autocomplete="given-name">
+              <p class="field-hint">Letters only, 2–40 characters.</p>
+            </div>
+            <div class="field-group">
+              <label for="lastName">Last name<span class="req">*</span></label>
+              <input type="text" id="lastName" name="lastName" required
+                     pattern="[A-Za-z\s\-']{2,40}"
+                     placeholder=" "
+                     autocomplete="family-name">
+              <p class="field-hint">Letters only, 2–40 characters.</p>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="email">Email address<span class="req">*</span></label>
+              <input type="email" id="email" name="email" required
+                     placeholder=" "
+                     autocomplete="email">
+            </div>
+            <div class="field-group">
+              <label for="phone">Phone number<span class="req">*</span></label>
+              <input type="tel" id="phone" name="phone" required
+                     pattern="[\d\s\+\-\(\)]{8,16}"
+                     placeholder=" "
+                     autocomplete="tel">
+              <p class="field-hint">e.g. +974 5555 1234</p>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="location">Current location<span class="req">*</span></label>
+            <input type="text" id="location" name="location" required
+                   placeholder=" "
+                   minlength="2" maxlength="60">
+          </div>
+        </fieldset>
+
+        <fieldset class="form-fieldset">
+          <legend>Personal details</legend>
+          <p class="fieldset-sub">We need this information to verify your identity for security clearance purposes.</p>
+
+          <div class="field-group">
+            <label for="dob">Date of birth<span class="req">*</span></label>
+            <input type="text" id="dob" name="dob" required
+                   pattern="\d{2}/\d{2}/\d{4}"
+                   placeholder="dd/mm/yyyy">
+            <p class="field-hint">Format: dd/mm/yyyy, e.g. 05/03/1998.</p>
+          </div>
+
+          <fieldset class="field-group">
+            <legend>Gender<span class="req">*</span></legend>
+            <div class="choice-group">
+              <label class="choice-item"><input type="radio" name="gender" value="female" required> Female</label>
+              <label class="choice-item"><input type="radio" name="gender" value="male"> Male</label>
+              <label class="choice-item"><input type="radio" name="gender" value="non-binary"> Non-binary</label>
+              <label class="choice-item"><input type="radio" name="gender" value="prefer-not-to-say"> Prefer not to say</label>
+            </div>
+          </fieldset>
+        </fieldset>
+
+        <fieldset class="form-fieldset">
+          <legend>Address</legend>
+          <p class="fieldset-sub">Your current residential address.</p>
+
+          <div class="field-group">
+            <label for="streetAddress">Street address<span class="req">*</span></label>
+            <input type="text" id="streetAddress" name="streetAddress" required
+                   maxlength="40"
+                   placeholder=" ">
+            <p class="field-hint">Up to 40 characters.</p>
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="suburb">Suburb/Town<span class="req">*</span></label>
+              <input type="text" id="suburb" name="suburb" required
+                     maxlength="40"
+                     placeholder=" ">
+              <p class="field-hint">Up to 40 characters.</p>
+            </div>
+            <div class="field-group">
+              <label for="state">State<span class="req">*</span></label>
+              <select id="state" name="state" required>
+                <option value="">Select a state</option>
+                <option value="VIC">VIC</option>
+                <option value="NSW">NSW</option>
+                <option value="QLD">QLD</option>
+                <option value="NT">NT</option>
+                <option value="WA">WA</option>
+                <option value="SA">SA</option>
+                <option value="TAS">TAS</option>
+                <option value="ACT">ACT</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="postcode">Postcode<span class="req">*</span></label>
+            <input type="text" id="postcode" name="postcode" required
+                   pattern="\d{4}"
+                   maxlength="4"
+                   placeholder=" ">
+            <p class="field-hint">Exactly 4 digits, e.g. 3122.</p>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-fieldset">
+          <legend>Skills</legend>
+          <p class="fieldset-sub">Select all skills that apply to you.</p>
+
+          <div class="field-group">
+            <div class="choice-group">
+              <label class="choice-item"><input type="checkbox" name="skills" value="network-security"> Network security</label>
+              <label class="choice-item"><input type="checkbox" name="skills" value="cloud-computing"> Cloud computing</label>
+              <label class="choice-item"><input type="checkbox" name="skills" value="programming"> Programming/scripting</label>
+              <label class="choice-item"><input type="checkbox" name="skills" value="incident-response"> Incident response</label>
+              <label class="choice-item"><input type="checkbox" name="skills" value="other" id="otherSkillsCheck"> Other skills...</label>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="otherSkills">If "Other skills..." selected, tell us more</label>
+            <textarea id="otherSkills" name="otherSkills" maxlength="300" placeholder=" "></textarea>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-fieldset">
+          <legend>Your experience</legend>
+          <p class="fieldset-sub">Help us understand your background.</p>
+
+          <div class="field-group">
+            <label for="yearsExp">Years of relevant experience<span class="req">*</span></label>
+            <select id="yearsExp" name="yearsExp" required>
+              <option value="">Select one</option>
+              <option value="0-1">Less than 1 year</option>
+              <option value="1-2">1–2 years</option>
+              <option value="3-5">3–5 years</option>
+              <option value="5+">5+ years</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label for="summary">Tell us about relevant work you've done<span class="req">*</span></label>
+            <textarea id="summary" name="summary" required
+                      minlength="20" maxlength="800"
+                      placeholder=" "></textarea>
+            <p class="field-hint">A few sentences is enough.</p>
+          </div>
+
+          <div class="field-group">
+            <label for="cvUpload">Upload your CV<span class="req">*</span></label>
+            <input type="file" id="cvUpload" name="cvUpload" accept=".pdf,.doc,.docx" required>
+            <p class="field-hint">PDF or Word document, up to 5MB.</p>
+          </div>
+
+          <div class="field-group">
+            <label for="linkedin">LinkedIn or portfolio link (optional)</label>
+            <input type="text" id="linkedin" name="linkedin" placeholder="https://...">
+          </div>
+        </fieldset>
+
+        <fieldset class="form-fieldset">
+          <legend>Eligibility</legend>
+          <p class="fieldset-sub">These roles require security clearance and confirmation of your right to work.</p>
+
+          <div class="field-group">
+            <label>Are you eligible to work in Qatar?<span class="req">*</span></label>
+            <div class="choice-group">
+              <label class="choice-item"><input type="radio" name="workEligible" value="yes" required> Yes, I'm currently eligible to work in Qatar</label>
+              <label class="choice-item"><input type="radio" name="workEligible" value="sponsorship"> I would need sponsorship or a work permit</label>
+              <label class="choice-item"><input type="radio" name="workEligible" value="no"> No</label>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label>Have you held a government security clearance before?<span class="req">*</span></label>
+            <div class="choice-group">
+              <label class="choice-item"><input type="radio" name="hadClearance" value="yes" required> Yes</label>
+              <label class="choice-item"><input type="radio" name="hadClearance" value="no"> No, this would be my first</label>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="startDate">When could you start, if successful?<span class="req">*</span></label>
+            <input type="date" id="startDate" name="startDate" required min="2026-06-25">
+          </div>
+
+          <div class="field-group">
+            <label class="choice-item" style="font-weight:600;">
+              <input type="checkbox" id="consent" name="consent" required>
+              I consent to SecureGov processing my personal information for this application, and to the security clearance and background checks required for this role.<span class="req">*</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="form-actions">
+          <button type="reset" class="btn btn-outline-dark">Clear form</button>
+          <button type="submit" class="btn btn-cta">Submit application</button>
+        </div>
+
+        <p class="form-note">
+          Submitting this form sends your application to our recruitment team for review. You'll receive a confirmation email within 5 business days.
+        </p>
+
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="brand" style="margin-bottom:14px;">
+          <svg width="26" height="26" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M15 2L26 6.5V14C26 21.5 21 26.5 15 28C9 26.5 4 21.5 4 14V6.5L15 2Z" stroke="#FFFFFF" stroke-width="1.6" fill="rgba(255,255,255,0.06)"/>
+            <path d="M10.5 15L13.5 18L19.5 11.5" stroke="#1D9E75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>SecureGov</span>
+        </a>
+        <p>The national agency for government network security, IT infrastructure, and digital support services.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Site</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="jobs.html">Careers</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="apply.html">Apply now</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Project links</h4>
+        <ul>
+          <li><a href="#">Jira board</a></li>
+          <li><a href="#">GitHub repository</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:info@securegov.example.gov">info@securegov.example.gov</a></li>
+          <li><a href="tel:+97440000000">+974 4000 0000</a></li>
+          <li>Doha, Qatar</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 SecureGov. A fictional government agency, created for educational purposes.</span>
+      <span>SYS-STATUS: OPERATIONAL</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
