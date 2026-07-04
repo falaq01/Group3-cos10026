@@ -60,9 +60,8 @@
               <label for="role">Role you're applying for<span class="req">*</span></label>
               <select id="role" name="role" required>
                 <option value="">Select a role</option>
-                <option value="cybersecurity-analyst">Cybersecurity Analyst — REQ-2026-0114</option>
-                <option value="it-support-officer">IT Support Officer — REQ-2026-0119</option>
-                <option value="network-infrastructure-engineer">Network Infrastructure Engineer — REQ-2026-0122</option>
+                <option value="cyber-threat-analyst">Cyber Threat Intelligence Analyst — SG-321</option>
+                <option value="cloud-security-architect">Senior Cloud Security Architect — SG-123</option>
               </select>
             </div>
 
@@ -72,7 +71,7 @@
                      pattern="[A-Za-z0-9]{5}"
                      maxlength="5"
                      placeholder=" ">
-              <p class="field-hint">Exactly 5 letters/numbers, e.g. R2026 (see the job posting).</p>
+              <p class="field-hint">Exactly 5 letters/numbers, e.g. SG999 (remove "-" and check the job postings).</p>
             </div>
 
             <div class="field-row">
@@ -132,8 +131,6 @@
               <div class="choice-group">
                 <label class="choice-item"><input type="radio" name="gender" value="female" required> Female</label>
                 <label class="choice-item"><input type="radio" name="gender" value="male"> Male</label>
-                <label class="choice-item"><input type="radio" name="gender" value="non-binary"> Non-binary</label>
-                <label class="choice-item"><input type="radio" name="gender" value="prefer-not-to-say"> Prefer not to say</label>
               </div>
             </fieldset>
 
@@ -154,25 +151,25 @@
 
             <div class="field-row">
               <div class="field-group">
-                <label for="suburb">Suburb / Town<span class="req">*</span></label>
-                <input type="text" id="suburb" name="suburb" required
+                <label for="city">City / Town<span class="req">*</span></label>
+                <input type="text" id="city" name="city" required
                        maxlength="40"
                        placeholder=" "
                        autocomplete="address-level2">
                 <p class="field-hint">Up to 40 characters.</p>
               </div>
               <div class="field-group">
-                <label for="state">State<span class="req">*</span></label>
-                <select id="state" name="state" required autocomplete="address-level1">
-                  <option value="">Select a state</option>
-                  <option value="VIC">VIC</option>
-                  <option value="NSW">NSW</option>
-                  <option value="QLD">QLD</option>
-                  <option value="NT">NT</option>
-                  <option value="WA">WA</option>
-                  <option value="SA">SA</option>
-                  <option value="TAS">TAS</option>
-                  <option value="ACT">ACT</option>
+                <label for="municipality">Municipality<span class="req">*</span></label>
+                <select id="municipality" name="municipality" required autocomplete="address-level1">
+                  <option value="">Select a municipality</option>
+                  <option value="SHML">Al Shamal</option>
+                  <option value="KHR">Al Khor</option>
+                  <option value="SHA">Al Shahaniya</option>
+                  <option value="USL">Umm Slal</option>
+                  <option value="ADA">Al Daayen</option>
+                  <option value="DOH">Doha</option>
+                  <option value="ARY">Al Rayyan</option>
+                  <option value="AWK">Al Wakrah</option>
                 </select>
               </div>
             </div>
