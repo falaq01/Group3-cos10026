@@ -230,14 +230,6 @@ main {
   border: none;
 }
 
-.footer-col h3 {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.78rem;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  color: #6FA9D6;
-  margin-bottom: 12px;
-}
 
 @media (max-width: 768px) {
   .page-layout {
