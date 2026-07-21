@@ -204,128 +204,41 @@
       <p class="ai-credit"><em>Note: Team members as characters were generated using AI image generation tool.</em></p>
 
       <div class="table-scroll">
-          <table class="team-table">
-            <caption>
-              Group 3 members, student IDs and contributions
-            </caption>
-            <thead>
-              <tr>
-                <th scope="col">Name</th>
-                <th scope="col">Student ID</th>
-                <th scope="col">Contribution</th>
-                <th scope="col">Hometown</th>
-                <th scope="col">Coding Snack</th>
-                <th scope="col">Part 1</th>
-                <th scope="col">Part 2</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Falaq Nadeem</th>
-                <td>106194653</td>
-                <td>Home page, application form layout, GitHub deployment</td>
-                <td>Pakistan</td>
-                <td>Hot Cheetos</td>
-                <td>
-                  <ul>
-                    <li>Designed and built the home page (index.html)</li>
-                    <li>Laid out the structure of the application form</li>
-                    <li>Managed the GitHub repository deployment</li>
-                  </ul>
-                </td>
-                <td>
-                  <ul>
-                    <li>Converting all pages to PHP</li>
-                    <li>Building the shared header/nav/footer includes</li>
-                    <li>
-                      Consolidating the site's CSS into a single stylesheet
-                    </li>
-                    <li>Managing the database connection</li>
-                    <li>Building the about page's dynamic query</li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">Mohamed Ali</th>
-                <td>106404909</td>
-                <td>Jobs page, application form submission, Jira board</td>
-                <td>Tunisia</td>
-                <td>Ice Cream</td>
-                <td>
-                  <ul>
-                    <li>Built the jobs listing page</li>
-                    <li>Built the application form's submission handling</li>
-                    <li>Maintained the team's Jira board</li>
-                  </ul>
-                </td>
-                <td>
-                  <ul>
-                    <li>
-                      Converting jobs.php to render all job postings dynamically
-                      from MySQL
-                    </li>
-                    <li>Creating the jobs database table</li>
-                    <li>
-                      Building the password-protected HR manager dashboard
-                      (manage.php) with filtering, sorting, and status-update
-                      features
-                    </li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">Syed</th>
-                <td>106195737</td>
-                <td>Application form fields and validation</td>
-                <td>India</td>
-                <td>Batatos</td>
-                <td>
-                  <ul>
-                    <li>Built the application form's fields</li>
-                    <li>Built the form's client-side validation</li>
-                  </ul>
-                </td>
-                <td>
-                  <ul>
-                    <li>Removing all client-side validation</li>
-                    <li>
-                      Rewriting it entirely as server-side validation and
-                      sanitisation in process_eoi.php
-                    </li>
-                    <li>
-                      Creating the eoi database table and inserting validated
-                      applicant records
-                    </li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">Hend</th>
-                <td>106194174</td>
-                <td>About page</td>
-                <td>Qatar</td>
-                <td>Red Bull</td>
-                <td>
-                  <ul>
-                    <li>Designed and built the About page</li>
-                    <li>Built the team profile section</li>
-                  </ul>
-                </td>
-                <td>
-                  <ul>
-                    <li>
-                      Wrote the CREATE TABLE SQL statements for both the eoi and
-                      about database tables
-                    </li>
-                    <li>
-                      Rebuilt the about page's front-end HTML and CSS structure
-                      to display member data dynamically from the database
-                    </li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+       <tr>
+  <th scope="row" data-label="Name">Falaq Nadeem</th>
+
+  <td data-label="Student ID">
+    106194653
+  </td>
+
+  <td data-label="Contribution">
+    Home page, application form layout, GitHub deployment
+  </td>
+
+  <td data-label="Hometown">
+    Pakistan
+  </td>
+
+  <td data-label="Coding Snack">
+    Hot Cheetos
+  </td>
+
+  <td data-label="Part 1">
+    <ul>
+      <li>Designed and built the home page (index.html)</li>
+      <li>Laid out the structure of the application form</li>
+      <li>Managed the GitHub repository deployment</li>
+    </ul>
+  </td>
+
+  <td data-label="Part 2">
+    <ul>
+      <li>Converting all pages to PHP</li>
+      <li>Building shared header/nav/footer includes</li>
+      <li>Managing database connection</li>
+    </ul>
+  </td>
+</tr>
         </div>
     </div>
   </section>
