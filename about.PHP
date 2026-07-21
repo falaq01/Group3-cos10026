@@ -212,6 +212,8 @@
             <th scope="col">Contribution</th>
             <th scope="col">Hometown</th>
             <th scope="col">Coding Snack</th>
+            <th scope="col">Part 1</th>
+            <th scope="col">Part 2</th>
           </tr>
         </thead>
         <tbody>
@@ -226,6 +228,8 @@
                   <td><?php echo htmlspecialchars($row['contribution']); ?></td>
                   <td><?php echo htmlspecialchars($row['hometown']); ?></td>
                   <td><?php echo htmlspecialchars($row['codingSnack']); ?></td>
+                  <td><?php echo htmlspecialchars($row['Part1']); ?></td>
+                  <td><?php echo htmlspecialchars($row['Part2']); ?></td>
                 </tr>
               <?php } ?>
 
@@ -238,6 +242,9 @@
               <td>Sample contribution text pulled from the about table.</td>
               <td>Sample Hometown</td>
               <td>Sample Snack</td>
+             <td>Work Completed in Part 1 </td>
+             <td>Work Completed in Part 2</td>
+              
             </tr>
           </tbody>
       </table>
