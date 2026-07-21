@@ -6,6 +6,6 @@ CREATE TABLE about
   contribution TEXT NOT NULL,
   hometown VARCHAR(50) NOT NULL,
   codingSnack VARCHAR(50) NOT NULL,
-  part1 TEXT,
-  part2 TEXT
+  part1 TEXT NOT NULL,
+  part2 TEXT NOT NULL
 );
