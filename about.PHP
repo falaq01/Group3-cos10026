@@ -215,35 +215,31 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">Falaq Nadeem</th>
-            <td>106194653</td>
-            <td>Home page, application form layout, GitHub deployment</td>
-            <td>Pakistan</td>
-            <td>Hot Cheetos</td>
-          </tr>
-          <tr>
-            <th scope="row">Mohamed Ali</th>
-            <td>106404909</td>
-            <td>Jobs page, application form submission, Jira board</td>
-            <td>Tunisia</td>
-            <td>Ice Cream</td>
-          </tr>
-          <tr>
-            <th scope="row">Syed</th>
-            <td>106195737</td>
-            <td>Application form fields and validation</td>
-            <td>India</td>
-            <td>Batatos</td>
-          </tr>
-          <tr>
-            <th scope="row">Hend</th>
-            <td>106194174</td>
-            <td>About page</td>
-            <td>Qatar</td>
-            <td>Red Bull</td>
-          </tr>
-        </tbody>
+            <!--
+              FALAQ: this is where the PHP loop over the `about` table goes.
+              Replace this single sample row with something like:
+
+              <?php while ($row = $result->fetch_assoc()) { ?>
+                <tr>
+                  <th scope="row"><?php echo htmlspecialchars($row['name']); ?></th>
+                  <td><?php echo htmlspecialchars($row['studentId']); ?></td>
+                  <td><?php echo htmlspecialchars($row['contribution']); ?></td>
+                  <td><?php echo htmlspecialchars($row['hometown']); ?></td>
+                  <td><?php echo htmlspecialchars($row['codingSnack']); ?></td>
+                </tr>
+              <?php } ?>
+
+              The sample row below is only a placeholder to show the expected
+              layout/columns — it should be removed once the loop is wired in.
+            -->
+            <tr>
+              <th scope="row">Sample Name</th>
+              <td>000000000</td>
+              <td>Sample contribution text pulled from the about table.</td>
+              <td>Sample Hometown</td>
+              <td>Sample Snack</td>
+            </tr>
+          </tbody>
       </table>
 
     </div>
