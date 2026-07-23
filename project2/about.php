@@ -121,20 +121,22 @@ require_once('nav.inc');
         echo "<thead><tr>
                 <th scope='col'>Name</th>
                 <th scope='col'>Student ID</th>
-                <th scope='col'>Nationality</th>
-                <th scope='col'>Role</th>
+                <th scope='col'>Hometown</th>
+                <th scope='col'>Coding Snack</th>
+                <th scope='col'>Contribution</th>
                 <th scope='col'>Part 1 Work</th>
                 <th scope='col'>Part 2 Work</th>
               </tr></thead>";
         echo "<tbody>";
         while ($row = mysqli_fetch_assoc($result)) {
             echo "<tr>";
-            echo "<th scope='row'>" . htmlspecialchars($row['memberName']) . "</th>";
-            echo "<td>" . htmlspecialchars($row['studentID']) . "</td>";
-            echo "<td>" . htmlspecialchars($row['nationality']) . "</td>";
-            echo "<td>" . htmlspecialchars($row['contribution']) . "</td>";
-            echo "<td>" . htmlspecialchars($row['part1Work']) . "</td>";
-            echo "<td>" . htmlspecialchars($row['part2Work']) . "</td>";
+            echo "<th scope='row' data-label='Name'>" . htmlspecialchars($row['name']) . "</th>";
+            echo "<td data-label='Student ID'>" . htmlspecialchars($row['studentId']) . "</td>";
+            echo "<td data-label='Hometown'>" . htmlspecialchars($row['hometown']) . "</td>";
+            echo "<td data-label='Coding Snack'>" . htmlspecialchars($row['codingSnack']) . "</td>";
+            echo "<td data-label='Contribution'>" . htmlspecialchars($row['contribution']) . "</td>";
+            echo "<td data-label='Part 1 Work'>" . htmlspecialchars($row['part1']) . "</td>";
+            echo "<td data-label='Part 2 Work'>" . htmlspecialchars($row['part2']) . "</td>";
             echo "</tr>";
         }
         echo "</tbody></table>";
