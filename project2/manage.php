@@ -3,6 +3,9 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL);
 session_start();
 
+$pageTitle = "HR Dashboard | SecureGov";
+$currentPage = "manage";
+
 if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
     header('Location: login.php');
     exit();
@@ -101,11 +104,6 @@ if (!empty($params)) {
     }
 }
 ?>
-
-
-
-$pageTitle = "HR Login | SecureGov";
-$currentPage = "login";
 <?php include 'header.inc'; ?>
 <?php include 'nav.inc'; ?>
 

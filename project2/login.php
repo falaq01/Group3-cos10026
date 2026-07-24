@@ -1,6 +1,9 @@
 <?php
 session_start();
 
+$pageTitle = "HR Login | SecureGov"; //
+$currentPage = "login";
+
 if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
     header('Location: manage.php');
     exit();
