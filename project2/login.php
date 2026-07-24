@@ -11,8 +11,6 @@ $error = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     require_once 'settings.php';
 
-    $conn = mysqli_connect($host, $user, $password, $database);
-
     if (!$conn) {
         die("Database connection failed: " . mysqli_connect_error());
     }
@@ -20,7 +18,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = trim(htmlspecialchars(stripslashes($_POST['username'])));
     $password_input = trim($_POST['password']);
 
-    // Prepared statement to prevent SQL injection
     $stmt = mysqli_prepare($conn, "SELECT * FROM users WHERE username = ?");
 
     if (!$stmt) {
@@ -32,9 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $result = mysqli_stmt_get_result($stmt);
 
     if ($row = mysqli_fetch_assoc($result)) {
-        // Verify hashed password
         if (password_verify($password_input, $row['password'])) {
-            // Regenerate session ID to prevent session fixation
             session_regenerate_id(true);
             $_SESSION['logged_in'] = true;
             $_SESSION['username'] = $username;
@@ -64,9 +59,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <div class="section-light">
     <div class="container">
-        <div class="form-card" style="max-width: 420px;">
+        <div class="form-card login-card">
             <?php if ($error): ?>
-                <p style="color: #C0395B; margin-bottom: 1rem;"><?php echo $error; ?></p>
+                <p class="login-error"><?php echo $error; ?></p>
             <?php endif; ?>
 
             <form method="post" action="login.php">
