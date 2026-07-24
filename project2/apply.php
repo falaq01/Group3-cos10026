@@ -190,16 +190,16 @@ include 'nav.inc';
               <div class="field-group<?php echo errClass('state', $errors); ?>">
                 <label for="state">Municipality<span class="req">*</span></label>
                 <select id="state" name="state">
-                  <option value="">Select a municipality</option>
-                  <option value="SHM"<?php echo selectedIf('state', 'SHM', $old); ?>>Al Shamal</option>
-                  <option value="KHR"<?php echo selectedIf('state', 'KHR', $old); ?>>Al Khor</option>
-                  <option value="SHA"<?php echo selectedIf('state', 'SHA', $old); ?>>Al Shahaniya</option>
-                  <option value="USL"<?php echo selectedIf('state', 'USL', $old); ?>>Umm Slal</option>
-                  <option value="ADA"<?php echo selectedIf('state', 'ADA', $old); ?>>Al Daayen</option>
-                  <option value="DOH"<?php echo selectedIf('state', 'DOH', $old); ?>>Doha</option>
-                  <option value="ARY"<?php echo selectedIf('state', 'ARY', $old); ?>>Al Rayyan</option>
-                  <option value="AWK"<?php echo selectedIf('state', 'AWK', $old); ?>>Al Wakrah</option>
-                </select>
+  <option value="">Select a state</option>
+  <option value="NSW"<?php echo selectedIf('state', 'NSW', $old); ?>>New South Wales</option>
+  <option value="VIC"<?php echo selectedIf('state', 'VIC', $old); ?>>Victoria</option>
+  <option value="QLD"<?php echo selectedIf('state', 'QLD', $old); ?>>Queensland</option>
+  <option value="WA"<?php echo selectedIf('state', 'WA', $old); ?>>Western Australia</option>
+  <option value="SA"<?php echo selectedIf('state', 'SA', $old); ?>>South Australia</option>
+  <option value="TAS"<?php echo selectedIf('state', 'TAS', $old); ?>>Tasmania</option>
+  <option value="ACT"<?php echo selectedIf('state', 'ACT', $old); ?>>Australian Capital Territory</option>
+  <option value="NT"<?php echo selectedIf('state', 'NT', $old); ?>>Northern Territory</option>
+</select>
                 <?php errMsg('state', $errors); ?>
               </div>
             </div>

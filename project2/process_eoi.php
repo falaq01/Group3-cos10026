@@ -93,7 +93,7 @@ $errors = array();
 // Values that must match the options we actually offer on the form.
 $validJobRefs = array('SG321', 'SG123');
 $validGenders = array('Female', 'Male', 'Prefer not to say');
-$validStates  = array('SHM', 'KHR', 'SHA', 'USL', 'ADA', 'DOH', 'ARY', 'AWK');
+$validStates  = array('NSW', 'VIC', 'QLD', 'WA', 'SA', 'TAS', 'ACT', 'NT');
 $validSkills  = array('Network security', 'Cloud computing', 'Programming / scripting', 'Incident response', 'Other');
 
 // --- Job reference number: exactly 5 letters or digits, and must be a real posting
