@@ -295,25 +295,10 @@ if (!empty($errors)) {
    STEP 5 — Connect to MySQL and make sure the eoi table exists
    ============================================================ */
 require_once 'settings.php';
-
-/*
-  On PHP 8.1+ mysqli throws exceptions by default, which would produce a raw
-  fatal error page. Turning reporting off restores the older behaviour where
-  the mysqli functions simply return false, so we can catch problems ourselves
-  and show the user a proper message instead.
-*/
 mysqli_report(MYSQLI_REPORT_OFF);
-
-$conn = @mysqli_connect($host, $user, $pwd);
 
 if (!$conn) {
     $dbError = "Could not connect to the database server.";
-} else {
-    // Create the database if this is a fresh install, then select it.
-    mysqli_query($conn, "CREATE DATABASE IF NOT EXISTS `$sql_db`");
-    if (!mysqli_select_db($conn, $sql_db)) {
-        $dbError = "Could not select the database.";
-    }
 }
 
 if (!isset($dbError)) {
