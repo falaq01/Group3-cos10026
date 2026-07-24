@@ -10,8 +10,6 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 
 require_once 'settings.php';
 
-$conn = mysqli_connect($host, $user, $password, $database);
-
 if (!$conn) {
     die("Database connection failed: " . mysqli_connect_error());
 }
@@ -20,7 +18,7 @@ if (!$conn) {
 $delete_msg = '';
 if (isset($_POST['delete_ref'])) {
     $delete_ref = trim(htmlspecialchars(stripslashes($_POST['delete_ref'])));
-    $stmt = mysqli_prepare($conn, "DELETE FROM eoi WHERE job_ref = ?");
+    $stmt = mysqli_prepare($conn, "DELETE FROM eoi WHERE jobRefNumber = ?");
     if ($stmt) {
         mysqli_stmt_bind_param($stmt, "s", $delete_ref);
         mysqli_stmt_execute($stmt);
@@ -49,7 +47,7 @@ if (isset($_POST['change_status'])) {
 }
 
 // Build query based on filters
-$allowed_sort = ['EOInumber', 'job_ref', 'firstName', 'lastName', 'status'];
+$allowed_sort = ['EOInumber', 'jobRefNumber', 'firstName', 'lastName', 'status'];
 $sort = isset($_POST['sort_field']) && in_array($_POST['sort_field'], $allowed_sort)
     ? $_POST['sort_field']
     : 'EOInumber';
@@ -64,7 +62,7 @@ $params = [];
 $types = '';
 
 if (!empty($_POST['filter_ref'])) {
-    $where[] = "job_ref = ?";
+    $where[] = "jobRefNumber = ?";
     $params[] = trim($_POST['filter_ref']);
     $types .= 's';
 }
@@ -146,7 +144,7 @@ if (!empty($params)) {
                         <label for="sort_field">Sort by</label>
                         <select id="sort_field" name="sort_field">
                             <option value="EOInumber" <?php echo $sort === 'EOInumber' ? 'selected' : ''; ?>>EOI Number</option>
-                            <option value="job_ref" <?php echo $sort === 'job_ref' ? 'selected' : ''; ?>>Job Reference</option>
+                            <option value="jobRefNumber" <?php echo $sort === 'jobRefNumber' ? 'selected' : ''; ?>>Job Reference</option>
                             <option value="firstName" <?php echo $sort === 'firstName' ? 'selected' : ''; ?>>First Name</option>
                             <option value="lastName" <?php echo $sort === 'lastName' ? 'selected' : ''; ?>>Last Name</option>
                             <option value="status" <?php echo $sort === 'status' ? 'selected' : ''; ?>>Status</option>
@@ -187,7 +185,7 @@ if (!empty($params)) {
                     <?php while ($row = mysqli_fetch_assoc($result)): ?>
                         <tr>
                             <td><?php echo htmlspecialchars($row['EOInumber']); ?></td>
-                            <td><?php echo htmlspecialchars($row['job_ref']); ?></td>
+                            <td><?php echo htmlspecialchars($row['jobRefNumber']); ?></td>
                             <td><?php echo htmlspecialchars($row['firstName'] . ' ' . $row['lastName']); ?></td>
                             <td><?php echo htmlspecialchars($row['email']); ?></td>
                             <td><?php echo htmlspecialchars($row['phone']); ?></td>
@@ -204,8 +202,8 @@ if (!empty($params)) {
                             </td>
                             <td>
                                 <form method="post" action="manage.php" class="inline-form"
-                                    onsubmit="return confirm('Delete ALL applications for job ref <?php echo htmlspecialchars($row['job_ref']); ?>?');">
-                                    <input type="hidden" name="delete_ref" value="<?php echo htmlspecialchars($row['job_ref']); ?>">
+                                    onsubmit="return confirm('Delete ALL applications for job ref <?php echo htmlspecialchars($row['jobRefNumber']); ?>?');">
+                                    <input type="hidden" name="delete_ref" value="<?php echo htmlspecialchars($row['jobRefNumber']); ?>">
                                     <button type="submit" class="btn btn-outline-dark">Delete by ref</button>
                                 </form>
                             </td>
