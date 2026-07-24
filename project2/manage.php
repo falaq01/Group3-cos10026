@@ -102,6 +102,10 @@ if (!empty($params)) {
 }
 ?>
 
+
+
+$pageTitle = "HR Login | SecureGov";
+$currentPage = "login";
 <?php include 'header.inc'; ?>
 <?php include 'nav.inc'; ?>
 
