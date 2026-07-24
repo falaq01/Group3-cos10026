@@ -1050,3 +1050,20 @@ main {
   color: #0C447C;
 }
 
+.login-error {
+  color: #C0395B;
+  margin-bottom: 1rem;
+}
+
+.success-msg {
+  color: #0F6E56;
+  margin-bottom: 1rem;
+}
+
+.filter-card {
+  margin-bottom: 24px;
+}
+
+.inline-form {
+  display: inline;
+}
