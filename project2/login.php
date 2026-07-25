@@ -12,7 +12,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
 $error = '';
 $loggedOutMsg = '';             
 
-if (isset($_GET['loggedout']) && $_GET['loggedout'] === '1') {   // ← ADD this whole block
+if (isset($_GET['loggedout']) && $_GET['loggedout'] === '1') {   
     $loggedOutMsg = "You have been logged out successfully.";
 }
 
@@ -68,12 +68,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <div class="section-light">
     <div class="container">
         <div class="form-card login-card">
-            
-        
+
         <?php if ($loggedOutMsg): ?>
         <p class="success-msg"><?php echo htmlspecialchars($loggedOutMsg, ENT_QUOTES, 'UTF-8'); ?></p>
     <?php endif; ?>
-
 
             <?php if ($error): ?>
                 <p class="login-error"><?php echo $error; ?></p>
