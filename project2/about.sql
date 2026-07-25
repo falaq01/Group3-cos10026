@@ -1,0 +1,11 @@
+CREATE TABLE about
+(
+  memberID INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(50) NOT NULL,
+  studentId VARCHAR(20) NOT NULL,
+  contribution TEXT NOT NULL,
+  hometown VARCHAR(50) NOT NULL,
+  codingSnack VARCHAR(50) NOT NULL,
+  part1 TEXT NOT NULL,
+  part2 TEXT NOT NULL
+);
