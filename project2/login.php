@@ -10,7 +10,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
 }
 
 $error = '';
-$loggedOutMsg = '';              // ← ADD this line right after it
+$loggedOutMsg = '';             
 
 if (isset($_GET['loggedout']) && $_GET['loggedout'] === '1') {   // ← ADD this whole block
     $loggedOutMsg = "You have been logged out successfully.";
