@@ -111,6 +111,9 @@ if (!empty($params)) {
     <div class="container">
         <h1>HR Manager Dashboard</h1>
         <p>Manage submitted expressions of interest.</p>
+
+            <a href="logout.php" class="btn btn-outline-dark">Logout</a>
+
     </div>
 </div>
 

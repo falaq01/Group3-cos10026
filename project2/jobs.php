@@ -87,6 +87,6 @@ require_once('nav.inc');
     <p>Get a closer look at our team, our mission, and the work we do to protect Qatar's digital infrastructure.</p>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/vHm40_VWJ-g" title="Working at SecureGov" frameborder="0" allowfullscreen></iframe>
   </div>
-</section>
+</section>  
 
 <?php require_once('footer.inc'); ?>
