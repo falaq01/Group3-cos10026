@@ -93,7 +93,7 @@ $errors = array();
 // Values that must match the options we actually offer on the form.
 $validJobRefs = array('SG321', 'SG123');
 $validGenders = array('Female', 'Male', 'Prefer not to say');
-$validStates  = array('SHM', 'KHR', 'SHA', 'USL', 'ADA', 'DOH', 'ARY', 'AWK');
+$validStates  = array('DOH', 'ARY', 'AWK', 'KHR', 'USL', 'SHA', 'ADA', 'SHM');
 $validSkills  = array('Network security', 'Cloud computing', 'Programming / scripting', 'Incident response', 'Other');
 
 // --- Job reference number: exactly 5 letters or digits, and must be a real posting
@@ -295,25 +295,10 @@ if (!empty($errors)) {
    STEP 5 — Connect to MySQL and make sure the eoi table exists
    ============================================================ */
 require_once 'settings.php';
-
-/*
-  On PHP 8.1+ mysqli throws exceptions by default, which would produce a raw
-  fatal error page. Turning reporting off restores the older behaviour where
-  the mysqli functions simply return false, so we can catch problems ourselves
-  and show the user a proper message instead.
-*/
 mysqli_report(MYSQLI_REPORT_OFF);
-
-$conn = @mysqli_connect($host, $user, $pwd);
 
 if (!$conn) {
     $dbError = "Could not connect to the database server.";
-} else {
-    // Create the database if this is a fresh install, then select it.
-    mysqli_query($conn, "CREATE DATABASE IF NOT EXISTS `$sql_db`");
-    if (!mysqli_select_db($conn, $sql_db)) {
-        $dbError = "Could not select the database.";
-    }
 }
 
 if (!isset($dbError)) {
