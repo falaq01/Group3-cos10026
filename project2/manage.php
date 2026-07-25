@@ -11,7 +11,7 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
     exit();
 }
 
-require_once 'settings.php';
+include 'settings.php';
 
 if (!$conn) {
     die("Database connection failed: " . mysqli_connect_error());
@@ -105,15 +105,12 @@ if (!empty($params)) {
 }
 ?>
 <?php include 'header.inc'; ?>
-<?php include 'nav.inc'; ?>
 
 <div class="page-header">
     <div class="container">
         <h1>HR Manager Dashboard</h1>
         <p>Manage submitted expressions of interest.</p>
-
-            <a href="logout.php" class="btn btn-outline-dark">Logout</a>
-
+        <a href="logout.php" class="btn btn-logout">Logout</a>
     </div>
 </div>
 

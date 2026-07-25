@@ -1,42 +1,13 @@
 <?php
-/*
-  process_eoi.php
-  OWNER: Syed  (branch: syed-part2)
-  COS10026 Applied Web Project Part 2
-
-  What this file does, in order:
-    1. Blocks direct URL access (no POST data means you get sent back to apply.php).
-    2. Sanitises every incoming value with trim, stripslashes and htmlspecialchars.
-    3. Validates every field server-side using regular expressions and filter_var.
-    4. If anything is invalid, shows an error page and sends the user back to a
-       pre-filled form. Nothing touches the database.
-    5. If everything is valid, connects to MySQL, creates the eoi table if it
-       does not already exist, and inserts the record with a prepared statement.
-    6. Shows a confirmation page with the auto-generated EOI number.
-*/
 
 session_start();
 
-/* ============================================================
-   STEP 1 — Block direct URL access
-   ============================================================
-   If someone types process_eoi.php into the address bar there is no POST
-   data, so we redirect them to the form instead of showing a broken page.
-*/
 if ($_SERVER['REQUEST_METHOD'] !== 'POST' || empty($_POST)) {
     header('Location: apply.php');
     exit;
 }
 
 
-/* ============================================================
-   STEP 2 — Sanitisation
-   ============================================================
-   trim            removes leading/trailing whitespace
-   stripslashes    removes any backslashes added by escaping
-   htmlspecialchars converts < > " ' & into HTML entities so nothing the user
-                   types can be executed as HTML or script (XSS protection)
-*/
 function sanitiseInput($value)
 {
     $value = trim($value);
@@ -81,13 +52,6 @@ $phone         = getField('phone');
 $skillsArray   = getArrayField('skills');
 $otherSkills   = getField('otherSkills');
 
-
-/* ============================================================
-   STEP 3 — Server-side validation
-   ============================================================
-   $errors is keyed by field name so apply.php can highlight the exact field
-   that failed as well as list every message at the top of the page.
-*/
 $errors = array();
 
 // Values that must match the options we actually offer on the form.
@@ -226,13 +190,6 @@ if ($skills !== "" && strlen($skills) > 255) {
     $errors['skills'] = "Too many skills selected for the record.";
 }
 
-
-/* ============================================================
-   STEP 4 — If validation failed, stop here and show the errors
-   ============================================================
-   The database is never touched. Everything the user typed goes back into the
-   session so apply.php can redisplay a filled-in form.
-*/
 if (!empty($errors)) {
 
     $_SESSION['eoi_errors'] = $errors;
@@ -256,7 +213,6 @@ if (!empty($errors)) {
     $pageDesc    = "Your SecureGov expression of interest could not be submitted.";
     $currentPage = "apply";
     include 'header.inc';
-    include 'nav.inc';
     ?>
 
     <div class="page-header">
@@ -290,11 +246,7 @@ if (!empty($errors)) {
     exit;
 }
 
-
-/* ============================================================
-   STEP 5 — Connect to MySQL and make sure the eoi table exists
-   ============================================================ */
-require_once 'settings.php';
+include 'settings.php';
 mysqli_report(MYSQLI_REPORT_OFF);
 
 if (!$conn) {
@@ -303,12 +255,6 @@ if (!$conn) {
 
 if (!isset($dbError)) {
 
-    /*
-      eoi table structure — taken directly from Hend's eoi.sql (branch hend-part2),
-      verified column by column against her file on 24/07/2026.
-      IF NOT EXISTS means this page creates the table automatically the first
-      time it runs, which is the requirement, and does nothing after that.
-    */
     $createTable = "
         CREATE TABLE IF NOT EXISTS eoi (
             EOInumber     INT AUTO_INCREMENT PRIMARY KEY,
@@ -335,13 +281,6 @@ if (!isset($dbError)) {
 }
 
 
-/* ============================================================
-   STEP 6 — Insert the record
-   ============================================================
-   A prepared statement is used so the values are sent to MySQL separately
-   from the SQL text. This makes SQL injection impossible even if the
-   sanitisation above were bypassed.
-*/
 if (!isset($dbError)) {
 
     $insert = "INSERT INTO eoi
@@ -382,16 +321,11 @@ if (isset($conn) && $conn) {
 // A successful submission means the saved session copy is no longer needed.
 unset($_SESSION['eoi_old'], $_SESSION['eoi_errors']);
 
-
-/* ============================================================
-   STEP 7 — Output: either the database error or the confirmation
-   ============================================================ */
 $pageTitle   = isset($dbError) ? "Something went wrong | SecureGov" : "Application received | SecureGov";
 $pageDesc    = "Confirmation of your SecureGov expression of interest.";
 $currentPage = "apply";
 
 include 'header.inc';
-include 'nav.inc';
 ?>
 
 <?php if (isset($dbError)) { ?>

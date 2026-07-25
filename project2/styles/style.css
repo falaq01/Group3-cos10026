@@ -1068,3 +1068,14 @@ main {
 .inline-form {
   display: inline;
 }
+/*logout button*/
+.btn-logout {
+  background: transparent;
+  color: var(--navy-darker);
+  border-color: var(--navy-darker);
+}
+
+.btn-logout:hover {
+  background: var(--navy-darker);
+  color: var(--white);
+}

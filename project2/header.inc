@@ -19,3 +19,14 @@
       <span>Avg. incident response: 11 min</span>
     </div>
   </div>
+   <header class="site-header">
+    <input type="checkbox" id="navigation-toggle-checkbox">
+    <div class="nav-row">
+      <a href="index.php" class="brand">
+        <img src="images/logo.png" alt="SecureGov logo" width="30" height="30">
+        <span>SecureGov<span class="org-type">IT &amp; Cybersecurity Agency</span></span>
+      </a>
+      <label for="navigation-toggle-checkbox" class="navigation-toggle-label">&#9776;</label>
+      <?php include 'nav.inc'; ?>
+    </div>
+  </header>

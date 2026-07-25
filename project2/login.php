@@ -56,7 +56,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 
 <?php include 'header.inc'; ?>
-<?php include 'nav.inc'; ?>
 
 <div class="page-header">
     <div class="container">

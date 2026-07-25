@@ -1,9 +1,8 @@
 <?php
 $pageTitle = "Careers | SecureGov";
 $currentPage = "jobs";
-require_once('settings.php');
-require_once('header.inc');
-require_once('nav.inc');
+include('settings.php');
+include('header.inc');
 ?>
 
 <div class="page-layout">
@@ -89,4 +88,4 @@ require_once('nav.inc');
   </div>
 </section>  
 
-<?php require_once('footer.inc'); ?>
+<?php include('footer.inc'); ?>

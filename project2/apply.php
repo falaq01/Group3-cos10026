@@ -1,19 +1,4 @@
 <?php
-/*
-  apply.php
-  OWNER: Syed  (branch: syed-part2)
-  COS10026 Applied Web Project Part 2
-
-  Part 2 requirement: ALL HTML5 client-side validation is removed.
-  There are no required, pattern, min, minlength, maxlength attributes, and
-  no type="email" / type="tel" / type="date" inputs anywhere on this page,
-  because those all trigger the browser's own validation. Every field is a
-  plain text input, and ALL validation happens server-side in process_eoi.php.
-
-  Sticky form: if process_eoi.php rejects the submission it stores the user's
-  previous answers and the error list in the session, then sends them back
-  here so they don't have to retype everything.
-*/
 
 session_start();
 
@@ -22,9 +7,6 @@ $old    = isset($_SESSION['eoi_old'])    ? $_SESSION['eoi_old']    : array();
 $errors = isset($_SESSION['eoi_errors']) ? $_SESSION['eoi_errors'] : array();
 unset($_SESSION['eoi_old'], $_SESSION['eoi_errors']);
 
-/* ---------- small helpers for redisplaying old input safely ---------- */
-
-// Echo a previous text value, escaped so it can never inject HTML.
 function old($field, $old)
 {
     if (isset($old[$field])) {
@@ -73,7 +55,6 @@ $pageDesc    = "Submit your expression of interest for an open role at SecureGov
 $currentPage = "apply";
 
 include 'header.inc';
-include 'nav.inc';
 ?>
 
   <div class="page-header">

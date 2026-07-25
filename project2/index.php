@@ -1,9 +1,8 @@
 <?php
 $pageTitle = "Home | SecureGov";
 $currentPage = "home";
-require_once('settings.php');
-require_once('header.inc');
-require_once('nav.inc');
+include('settings.php'); //using include instead of require_once as if the file fails to load, might throw an error as require can only be required once
+include('header.inc');
 ?>
 
 <div class="page-header">
@@ -91,4 +90,4 @@ require_once('nav.inc');
   </div>
 </section>
 
-<?php require_once('footer.inc'); ?>
+<?php include('footer.inc'); ?>
